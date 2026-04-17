@@ -1,0 +1,96 @@
+import Link from "next/link";
+import { Phone, Mail, MapPin } from "lucide-react";
+
+export default function Footer() {
+  return (
+    <footer className="bg-brand-blue text-white pt-16 pb-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+          {/* Company Info */}
+          <div>
+            <div className="flex items-center gap-2 mb-6">
+              <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-brand-blue font-bold text-lg">
+                DM
+              </div>
+              <span className="font-bold text-xl">(ชื่อบริษัทลูกค้า)</span>
+            </div>
+            <p className="text-blue-200 text-sm leading-relaxed mb-6">
+              บริษัท (ชื่อบริษัทลูกค้า)
+              ให้บริการออกแบบ <br/>ติดตั้งงานระบบไฟฟ้าโรงงาน โซล่าเซลล์ <br/>และระบบแบตเตอรี่ลิเธียมครบวงจร
+            </p>
+            <div className="flex space-x-3 mt-4">
+              <a href="https://line.me/ti/p/~" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-[#00B900] flex items-center justify-center text-white hover:bg-[#009900] transition-colors shadow-sm hover:scale-110" title="LINE">
+                <span className="font-bold text-[10px]">LINE</span>
+              </a>
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-[#1877F2] flex items-center justify-center text-white hover:bg-[#166FE5] transition-colors shadow-sm hover:scale-110" title="Facebook">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+              </a>
+              <a href="mailto:info@volttech.co.th" className="w-10 h-10 rounded-full bg-[#EA4335] flex items-center justify-center text-white hover:bg-[#D33C30] transition-colors shadow-sm hover:scale-110" title="Email">
+                <Mail size={18} />
+              </a>
+              <a href="tel:02-XXX-XXXX" className="w-10 h-10 rounded-full bg-gray-600 flex items-center justify-center text-white hover:bg-gray-700 transition-colors shadow-sm hover:scale-110" title="Phone">
+                <Phone size={18} />
+              </a>
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h3 className="text-lg font-semibold mb-6 border-b border-blue-800 pb-2 inline-block">เมนูลัด</h3>
+            <ul className="space-y-3">
+              <li><Link href="/" className="text-blue-200 hover:text-white transition-colors">หน้าแรก</Link></li>
+              <li><Link href="/#about" className="text-blue-200 hover:text-white transition-colors">เกี่ยวกับเรา</Link></li>
+              <li><Link href="/#services" className="text-blue-200 hover:text-white transition-colors">บริการของเรา</Link></li>
+              <li><Link href="/#projects" className="text-blue-200 hover:text-white transition-colors">ผลงาน</Link></li>
+              <li><Link href="/#clients" className="text-blue-200 hover:text-white transition-colors">ลูกค้าของเรา</Link></li>
+              <li><Link href="/contact" className="text-blue-200 hover:text-white transition-colors">ติดต่อเรา</Link></li>
+            </ul>
+          </div>
+
+          {/* Services */}
+          <div>
+            <h3 className="text-lg font-semibold mb-6 border-b border-blue-800 pb-2 inline-block">บริการหลัก</h3>
+            <ul className="space-y-3">
+              <li className="text-blue-200">ติดตั้งระบบโซล่าเซลล์สำหรับบ้าน</li>
+              <li className="text-blue-200">ติดตั้งระบบโซล่าเซลล์สำหรับโรงงาน</li>
+              <li className="text-blue-200">ระบบแบตเตอรี่ลิเธียม (ESS)</li>
+              <li className="text-blue-200">ออกแบบและประกอบตู้ MDB</li>
+              <li className="text-blue-200">งานระบบไฟฟ้าห้องเย็น</li>
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h3 className="text-lg font-semibold mb-6 border-b border-blue-800 pb-2 inline-block">ติดต่อเรา</h3>
+            <ul className="space-y-4">
+              <li className="flex items-start">
+                <MapPin className="mr-3 text-brand-red shrink-0 mt-1" size={20} />
+                <span className="text-blue-200 text-sm">
+                  123/45 ถนนพัฒนาการ แขวงประเวศ เขตประเวศ กรุงเทพมหานคร 10250
+                </span>
+              </li>
+              <li className="flex items-center">
+                <Phone className="mr-3 text-brand-red shrink-0" size={20} />
+                <span className="text-blue-200 text-sm">02-XXX-XXXX, 081-XXX-XXXX</span>
+              </li>
+              <li className="flex items-center">
+                <Mail className="mr-3 text-brand-red shrink-0" size={20} />
+                <span className="text-blue-200 text-sm">info@volttech.co.th</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="border-t border-blue-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+          <p className="text-blue-300 text-sm mb-4 md:mb-0">
+            &copy; {new Date().getFullYear()} VoltTech Engineering Co., Ltd. All rights reserved.
+          </p>
+          <div className="flex space-x-6 text-sm text-blue-300">
+            <Link href="#" className="hover:text-white transition-colors">นโยบายความเป็นส่วนตัว</Link>
+            <Link href="#" className="hover:text-white transition-colors">เงื่อนไขการใช้บริการ</Link>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
