@@ -58,22 +58,22 @@ export default function ProjectsPage() {
   return (
     <div className="bg-surface min-h-screen">
       {/* Header */}
-      <div className="bg-brand-blue text-white py-20 mt-[-20px]">
-        <Reveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-10">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">ผลงานของเรา</h1>
-          <p className="text-xl text-blue-200 max-w-2xl mx-auto">
+      <div className="bg-brand-blue text-white py-16 md:py-20 mt-[-20px]">
+        <Reveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-8 md:mt-10">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">ผลงานของเรา</h1>
+          <p className="text-base sm:text-lg md:text-xl text-blue-200 max-w-2xl mx-auto leading-7">
             ความไว้วางใจจากลูกค้ากว่า 500 โครงการ 
           </p>
         </Reveal>
       </div>
 
       {/* Projects Grid */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8">
           {projects.map((project, index) => (
             <Reveal key={project.id} delayMs={(index % 3) * 110}>
             <div className="motion-card-strong bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 group hover:shadow-xl">
-              <div className="relative h-64 w-full overflow-hidden">
+              <div className="relative h-56 sm:h-64 w-full overflow-hidden">
                 <Image 
                   src={project.image} 
                   alt={project.title} 
@@ -81,16 +81,16 @@ export default function ProjectsPage() {
                   sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-110" 
                 />
-                <div className="absolute top-4 left-4 bg-brand-blue text-white text-xs font-bold px-3 py-1.5 rounded-full z-10 shadow-md">
+                <div className="absolute top-3 left-3 md:top-4 md:left-4 bg-brand-blue text-white text-[11px] md:text-xs font-bold px-2.5 md:px-3 py-1.5 rounded-full z-10 shadow-md">
                   {project.type}
                 </div>
               </div>
-              <div className="p-6">
+              <div className="p-5 md:p-6">
                 <div className="flex items-center gap-2 text-gray-500 text-sm mb-3">
                   <MapPin size={16} className="text-brand-red" />
                   <span>{project.location}</span>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2 group-hover:text-brand-blue transition-colors">
+                <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-3 line-clamp-2 group-hover:text-brand-blue transition-colors leading-snug">
                   {project.title}
                 </h3>
                 <p className="text-gray-600 mb-4 line-clamp-3 text-sm leading-relaxed">

@@ -51,29 +51,29 @@ export default function ServicesPage() {
   return (
     <div className="bg-surface min-h-screen">
       {/* Header */}
-      <div className="bg-brand-blue text-white py-20 mt-[-20px]">
-        <Reveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-10">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">บริการของเรา</h1>
-          <p className="text-xl text-blue-200 max-w-2xl mx-auto">
+      <div className="bg-brand-blue text-white py-16 md:py-20 mt-[-20px]">
+        <Reveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-8 md:mt-10">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">บริการของเรา</h1>
+          <p className="text-base sm:text-lg md:text-xl text-blue-200 max-w-2xl mx-auto leading-7">
             ให้บริการออกแบบและติดตั้งระบบไฟฟ้าสำหรับอุตสาหกรรมและระบบโซล่าเซลล์ <br/>โดยคำนึงถึงมาตรฐาน ความปลอดภัย และความเหมาะสม
           </p>
         </Reveal>
       </div>
 
       {/* Services Grid */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8">
           {services.map((service, index) => (
             <Reveal key={service.id} delayMs={(index % 3) * 110}>
-            <div id={service.id} className="motion-card-strong bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-xl">
-              <div className="w-16 h-16 bg-blue-50 text-brand-blue rounded-xl flex items-center justify-center mb-6">
+            <div id={service.id} className="motion-card-strong bg-white rounded-xl p-6 md:p-8 shadow-sm border border-gray-100 hover:shadow-xl">
+              <div className="w-14 h-14 md:w-16 md:h-16 bg-blue-50 text-brand-blue rounded-xl flex items-center justify-center mb-5 md:mb-6">
                 {service.icon}
               </div>
-              <h2 className="text-2xl font-bold text-brand-blue mb-4">{service.title}</h2>
-              <p className="text-gray-600 mb-6 leading-relaxed">
+              <h2 className="text-xl md:text-2xl font-bold text-brand-blue mb-4 leading-snug">{service.title}</h2>
+              <p className="text-sm md:text-base text-gray-600 mb-5 md:mb-6 leading-7 md:leading-relaxed">
                 {service.description}
               </p>
-              <ul className="space-y-3 mb-8">
+              <ul className="space-y-3">
                 {service.features.map((feature, i) => (
                   <li key={i} className="flex items-start">
                     <CheckCircle2 className="text-brand-green mr-2 shrink-0 mt-0.5" size={20} />
@@ -88,13 +88,13 @@ export default function ServicesPage() {
       </div>
 
       {/* CTA Section */}
-      <div className="bg-white py-20 border-t border-gray-100">
+      <div className="bg-white py-14 md:py-20 border-t border-gray-100">
         <Reveal className="max-w-4xl mx-auto px-4 text-center" delayMs={120}>
-          <h2 className="text-3xl font-bold text-brand-blue mb-4">ให้เราช่วยคุณเลือกระบบที่เหมาะสมที่สุด</h2>
-          <p className="text-gray-600 text-lg mb-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-brand-blue mb-4 leading-[1.18]">ให้เราช่วยคุณเลือกระบบที่เหมาะสมที่สุด</h2>
+          <p className="text-gray-600 text-base md:text-lg mb-8 leading-7 md:leading-relaxed">
             ทีมวิศวกรของเราพร้อมให้คำปรึกษา สำรวจหน้างาน และประเมินราคาฟรี ไม่มีค่าใช้จ่ายเบื้องต้น
           </p>
-          <Link href="/contact" className="inline-flex items-center gap-2 bg-brand-red text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-red-700 transition-colors shadow-lg">
+          <Link href="/contact" className="inline-flex w-full sm:w-auto items-center justify-center gap-2 bg-brand-red text-white px-6 md:px-8 py-3.5 md:py-4 rounded-md font-bold text-base md:text-lg hover:bg-red-700 transition-colors shadow-lg">
             ติดต่อสอบถามรายละเอียด <ArrowRight size={20} />
           </Link>
         </Reveal>

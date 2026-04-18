@@ -5,27 +5,27 @@ export default function ContactPage() {
   return (
     <div className="bg-surface min-h-screen">
       {/* Header */}
-      <div className="bg-brand-blue text-white py-20 mt-[-20px]">
+      <div className="bg-brand-blue text-white py-16 md:py-20 mt-[-20px]">
         <Reveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-10">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">ติดต่อเรา</h1>
-          <p className="text-xl text-blue-200 max-w-2xl mx-auto">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">ติดต่อเรา</h1>
+          <p className="text-base sm:text-lg md:text-xl text-blue-200 max-w-2xl mx-auto leading-7">
           เราพร้อมให้คำปรึกษาและประเมินราคาฟรี
           </p>
         </div>
         </Reveal>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-20">
         <Reveal>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16">
           {/* Contact Info */}
           <div>
-            <h2 className="text-3xl font-bold text-brand-blue mb-8">ข้อมูลการติดต่อ</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-brand-blue mb-6 md:mb-8">ข้อมูลการติดต่อ</h2>
             
-            <div className="space-y-8 mb-12">
+            <div className="space-y-6 md:space-y-8 mb-10 md:mb-12">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-blue-50 text-brand-blue rounded-full flex items-center justify-center shrink-0">
+                <div className="w-11 h-11 md:w-12 md:h-12 bg-blue-50 text-brand-blue rounded-full flex items-center justify-center shrink-0">
                   <MapPin size={24} />
                 </div>
                 <div>
@@ -39,7 +39,7 @@ export default function ContactPage() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-blue-50 text-brand-blue rounded-full flex items-center justify-center shrink-0">
+                <div className="w-11 h-11 md:w-12 md:h-12 bg-blue-50 text-brand-blue rounded-full flex items-center justify-center shrink-0">
                   <Phone size={24} />
                 </div>
                 <div>
@@ -50,7 +50,7 @@ export default function ContactPage() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-blue-50 text-brand-blue rounded-full flex items-center justify-center shrink-0">
+                <div className="w-11 h-11 md:w-12 md:h-12 bg-blue-50 text-brand-blue rounded-full flex items-center justify-center shrink-0">
                   <Mail size={24} />
                 </div>
                 <div>
@@ -60,7 +60,7 @@ export default function ContactPage() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-[#00B900]/10 text-[#00B900] rounded-full flex items-center justify-center shrink-0">
+                <div className="w-11 h-11 md:w-12 md:h-12 bg-[#00B900]/10 text-[#00B900] rounded-full flex items-center justify-center shrink-0">
                   <span className="font-bold text-sm">LINE</span>
                 </div>
                 <div>
@@ -70,7 +70,7 @@ export default function ContactPage() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-[#1877F2]/10 text-[#1877F2] rounded-full flex items-center justify-center shrink-0">
+                <div className="w-11 h-11 md:w-12 md:h-12 bg-[#1877F2]/10 text-[#1877F2] rounded-full flex items-center justify-center shrink-0">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
                 </div>
                 <div>
@@ -88,9 +88,9 @@ export default function ContactPage() {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 md:p-10">
+          <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 md:p-10">
             <h2 className="text-2xl font-bold text-brand-blue mb-6">ส่งข้อความถึงเรา</h2>
-            <form className="space-y-6">
+            <form className="space-y-5 md:space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">ชื่อ</label>

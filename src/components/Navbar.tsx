@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const navLinks = [
   { name: "หน้าแรก", href: "/" },
@@ -17,14 +17,18 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
 
+  useEffect(() => {
+    setIsOpen(false);
+  }, [pathname]);
+
   return (
     <nav className="bg-white shadow-sm sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-20">
+        <div className="flex justify-between h-16 md:h-20">
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center gap-2">
-              <div className="font-en w-12 h-12 bg-brand-blue rounded-full flex items-center justify-center text-white font-bold text-xl">
+              <div className="font-en w-10 h-10 md:w-12 md:h-12 bg-brand-blue rounded-full flex items-center justify-center text-white font-bold text-lg md:text-xl">
                 DM
               </div>
               <span className="font-bold text-brand-blue text-xl hidden sm:block">
@@ -67,14 +71,14 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-white border-t border-gray-100 shadow-lg absolute w-full">
-          <div className="px-4 pt-2 pb-6 space-y-2">
+        <div className="md:hidden fixed inset-x-0 top-16 bg-white/95 backdrop-blur border-t border-gray-100 shadow-lg">
+          <div className="max-h-[calc(100svh-4rem)] overflow-y-auto px-4 py-4 space-y-1">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className={`block px-3 py-3 rounded-md text-base font-medium ${pathname === link.href
+                className={`block px-3 py-3.5 rounded-md text-[15px] font-medium ${pathname === link.href
                   ? "bg-blue-50 text-brand-blue"
                   : "text-gray-700 hover:bg-gray-50 hover:text-brand-blue"
                   }`}
@@ -82,7 +86,7 @@ export default function Navbar() {
                 {link.name}
               </Link>
             ))}
-            <div className="pt-4 px-3">
+            <div className="pt-3 px-3">
               <Link
                 href="/contact"
                 onClick={() => setIsOpen(false)}
