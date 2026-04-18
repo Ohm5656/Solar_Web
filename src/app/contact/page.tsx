@@ -27,7 +27,7 @@ export default function ContactPage() {
                 <div>
                   <h3 className="text-lg font-bold text-gray-900 mb-1">ที่ตั้งสำนักงาน</h3>
                   <p className="text-gray-600 leading-relaxed">
-                    บริษัท โวลต์เทค เอ็นจิเนียริ่ง จำกัด<br />
+                    บริษัท (ชื่อบริษัทของคุณ)<br />
                     123/45 ถนนพัฒนาการ แขวงประเวศ<br />
                     เขตประเวศ กรุงเทพมหานคร 10250
                   </p>
