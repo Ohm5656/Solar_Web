@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, Factory, Home, ShieldCheck, Zap, Battery, Wrench } from "lucide-react";
 import Reveal from "@/components/Reveal";
+import HashScrollLink from "@/components/HashScrollLink";
 
 export default function HomePage() {
   return (
@@ -41,12 +42,12 @@ export default function HomePage() {
             </Reveal>
             <Reveal delayMs={220}>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-              <Link
-                href="/services"
+              <HashScrollLink
+                href="/#services"
                 className="w-full sm:w-auto bg-brand-red text-white px-6 md:px-8 py-3.5 md:py-4 rounded-md text-center font-semibold text-base md:text-lg hover:bg-red-700 transition-all shadow-lg flex items-center justify-center gap-2"
               >
                 ดูบริการของเรา <ArrowRight size={20} />
-              </Link>
+              </HashScrollLink>
               <Link
                 href="/contact"
                 className="w-full sm:w-auto bg-white/10 backdrop-blur-sm border border-white/30 text-white px-6 md:px-8 py-3.5 md:py-4 rounded-md text-center font-semibold text-base md:text-lg hover:bg-white/20 transition-all flex items-center justify-center"
