@@ -1,19 +1,23 @@
 import { Mail, MapPin, Phone } from "lucide-react";
+import Reveal from "@/components/Reveal";
 
 export default function ContactPage() {
   return (
     <div className="bg-surface min-h-screen">
       {/* Header */}
       <div className="bg-brand-blue text-white py-20 mt-[-20px]">
+        <Reveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">ติดต่อเรา</h1>
           <p className="text-xl text-blue-200 max-w-2xl mx-auto">
           เราพร้อมให้คำปรึกษาและประเมินราคาฟรี
           </p>
         </div>
+        </Reveal>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <Reveal>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Contact Info */}
           <div>
@@ -131,6 +135,7 @@ export default function ContactPage() {
             </form>
           </div>
         </div>
+        </Reveal>
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { ArrowRight, MapPin } from "lucide-react";
 import Link from "next/link";
+import Reveal from "@/components/Reveal";
 
 export default function ProjectsPage() {
   const projects = [
@@ -58,24 +59,26 @@ export default function ProjectsPage() {
     <div className="bg-surface min-h-screen">
       {/* Header */}
       <div className="bg-brand-blue text-white py-20 mt-[-20px]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-10">
+        <Reveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">ผลงานของเรา</h1>
           <p className="text-xl text-blue-200 max-w-2xl mx-auto">
             ความไว้วางใจจากลูกค้ากว่า 500 โครงการ 
           </p>
-        </div>
+        </Reveal>
       </div>
 
       {/* Projects Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => (
-            <div key={project.id} className="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 group">
+          {projects.map((project, index) => (
+            <Reveal key={project.id} delayMs={(index % 3) * 110}>
+            <div className="motion-card bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 group hover:shadow-xl">
               <div className="relative h-64 w-full overflow-hidden">
                 <Image 
                   src={project.image} 
                   alt={project.title} 
                   fill 
+                  sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-110" 
                 />
                 <div className="absolute top-4 left-4 bg-brand-blue text-white text-xs font-bold px-3 py-1.5 rounded-full z-10 shadow-md">
@@ -100,6 +103,7 @@ export default function ProjectsPage() {
                 </div>
               </div>
             </div>
+            </Reveal>
           ))}
         </div>
       </div>

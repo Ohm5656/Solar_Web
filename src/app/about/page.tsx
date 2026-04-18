@@ -1,21 +1,25 @@
 import Image from "next/image";
 import { CheckCircle2, Award, Users, Target } from "lucide-react";
+import Reveal from "@/components/Reveal";
 
 export default function AboutPage() {
   return (
     <div className="bg-surface min-h-screen">
       {/* Header */}
       <div className="bg-brand-blue text-white py-20 mt-[-20px]">
+        <Reveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">เกี่ยวกับเรา</h1>
           <p className="text-xl text-blue-200 max-w-3xl mx-auto">
             รู้จักกับ (ชื่อบริษัทลูกค้า) 
           </p>
         </div>
+        </Reveal>
       </div>
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <Reveal>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
           <div className="relative h-[500px] rounded-xl overflow-hidden shadow-xl">
             <Image
@@ -49,8 +53,10 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
+        </Reveal>
 
         {/* Vision & Mission */}
+        <Reveal delayMs={120}>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
           <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 text-center">
             <div className="w-16 h-16 bg-blue-50 text-brand-blue rounded-full flex items-center justify-center mx-auto mb-6">
@@ -81,8 +87,10 @@ export default function AboutPage() {
             </p>
           </div>
         </div>
+        </Reveal>
 
         {/* Standards */}
+        <Reveal delayMs={180}>
         <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-10 md:p-16 text-center">
           <div className="w-20 h-20 bg-brand-blue text-white rounded-full flex items-center justify-center mx-auto mb-8">
             <Award size={40} />
@@ -107,6 +115,7 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
+        </Reveal>
       </div>
     </div>
   );

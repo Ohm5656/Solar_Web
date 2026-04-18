@@ -1,5 +1,6 @@
 import { ArrowRight, Battery, CheckCircle2, Factory, Home, Settings, ShieldCheck, Zap } from "lucide-react";
 import Link from "next/link";
+import Reveal from "@/components/Reveal";
 
 export default function ServicesPage() {
   const services = [
@@ -51,19 +52,22 @@ export default function ServicesPage() {
     <div className="bg-surface min-h-screen">
       {/* Header */}
       <div className="bg-brand-blue text-white py-20 mt-[-20px]">
+        <Reveal className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">บริการของเรา</h1>
           <p className="text-xl text-blue-200 max-w-2xl mx-auto">
             ให้บริการออกแบบและติดตั้งระบบไฟฟ้าสำหรับอุตสาหกรรมและระบบโซล่าเซลล์ <br/>โดยคำนึงถึงมาตรฐาน ความปลอดภัย และความเหมาะสม
           </p>
         </div>
+        </Reveal>
       </div>
 
       {/* Services Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <div key={index} id={service.id} className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-all hover:-translate-y-1">
+            <Reveal key={service.id} delayMs={(index % 3) * 110}>
+            <div id={service.id} className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-all hover:-translate-y-1">
               <div className="w-16 h-16 bg-blue-50 text-brand-blue rounded-xl flex items-center justify-center mb-6">
                 {service.icon}
               </div>
@@ -80,12 +84,14 @@ export default function ServicesPage() {
                 ))}
               </ul>
             </div>
+            </Reveal>
           ))}
         </div>
       </div>
 
       {/* CTA Section */}
       <div className="bg-white py-20 border-t border-gray-100">
+        <Reveal className="max-w-4xl mx-auto px-4 text-center" delayMs={120}>
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-brand-blue mb-4">ให้เราช่วยคุณเลือกระบบที่เหมาะสมที่สุด</h2>
           <p className="text-gray-600 text-lg mb-8">
@@ -95,6 +101,7 @@ export default function ServicesPage() {
             ติดต่อสอบถามรายละเอียด <ArrowRight size={20} />
           </Link>
         </div>
+        </Reveal>
       </div>
     </div>
   );
