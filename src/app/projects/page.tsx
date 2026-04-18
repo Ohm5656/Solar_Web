@@ -72,7 +72,7 @@ export default function ProjectsPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <Reveal key={project.id} delayMs={(index % 3) * 110}>
-            <div className="motion-card bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 group hover:shadow-xl">
+            <div className="motion-card-strong bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 group hover:shadow-xl">
               <div className="relative h-64 w-full overflow-hidden">
                 <Image 
                   src={project.image} 

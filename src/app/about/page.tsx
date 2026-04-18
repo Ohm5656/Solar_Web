@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { CheckCircle2, Award, Users, Target } from "lucide-react";
 import Reveal from "@/components/Reveal";
+import CountUp from "@/components/CountUp";
 
 export default function AboutPage() {
   return (
@@ -43,11 +44,15 @@ export default function AboutPage() {
 
             <div className="grid grid-cols-2 gap-6">
               <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 text-center">
-                <div className="text-4xl font-bold text-brand-blue mb-2">10+</div>
+                <div className="text-4xl font-bold text-brand-blue mb-2">
+                  <CountUp end={10} suffix="+" />
+                </div>
                 <div className="text-gray-600">ปีแห่งประสบการณ์</div>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 text-center">
-                <div className="text-4xl font-bold text-brand-blue mb-2">500+</div>
+                <div className="text-4xl font-bold text-brand-blue mb-2">
+                  <CountUp end={500} suffix="+" />
+                </div>
                 <div className="text-gray-600">โครงการที่สำเร็จ</div>
               </div>
             </div>

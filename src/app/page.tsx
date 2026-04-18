@@ -118,7 +118,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Service Card 1 */}
             <Reveal>
-            <div className="motion-card bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-xl">
+            <div className="motion-card-strong bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-xl">
               <div className="w-14 h-14 bg-blue-50 text-brand-blue rounded-lg flex items-center justify-center mb-6">
                 <Zap size={32} />
               </div>
@@ -130,7 +130,7 @@ export default function HomePage() {
             </Reveal>
             {/* Service Card 2 */}
             <Reveal delayMs={90}>
-            <div className="motion-card bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-xl">
+            <div className="motion-card-strong bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-xl">
               <div className="w-14 h-14 bg-blue-50 text-brand-blue rounded-lg flex items-center justify-center mb-6">
                 <Battery size={32} />
               </div>
@@ -142,7 +142,7 @@ export default function HomePage() {
             </Reveal>
             {/* Service Card 3 */}
             <Reveal delayMs={180}>
-            <div className="motion-card bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-xl">
+            <div className="motion-card-strong bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-xl">
               <div className="w-14 h-14 bg-blue-50 text-brand-blue rounded-lg flex items-center justify-center mb-6">
                 <ShieldCheck size={32} />
               </div>
@@ -171,19 +171,19 @@ export default function HomePage() {
             <div>
               <h2 className="text-3xl font-bold text-brand-blue mb-8">กลุ่มลูกค้าของเรา</h2>
               <div className="grid grid-cols-2 gap-6">
-                <div className="motion-card flex items-center gap-4 p-4 bg-surface rounded-lg border border-gray-100 hover:shadow-lg">
+                <div className="flex items-center gap-4 p-4 bg-surface rounded-lg border border-gray-100">
                   <div className="text-brand-blue"><Home size={32} /></div>
                   <span className="font-semibold text-gray-800">บ้านพักอาศัย</span>
                 </div>
-                <div className="motion-card flex items-center gap-4 p-4 bg-surface rounded-lg border border-gray-100 hover:shadow-lg">
+                <div className="flex items-center gap-4 p-4 bg-surface rounded-lg border border-gray-100">
                   <div className="text-brand-blue"><Factory size={32} /></div>
                   <span className="font-semibold text-gray-800">โรงงานอุตสาหกรรม</span>
                 </div>
-                <div className="motion-card flex items-center gap-4 p-4 bg-surface rounded-lg border border-gray-100 hover:shadow-lg">
+                <div className="flex items-center gap-4 p-4 bg-surface rounded-lg border border-gray-100">
                   <div className="text-brand-blue"><Zap size={32} /></div>
                   <span className="font-semibold text-gray-800">อาคารสำนักงาน</span>
                 </div>
-                <div className="motion-card flex items-center gap-4 p-4 bg-surface rounded-lg border border-gray-100 hover:shadow-lg">
+                <div className="flex items-center gap-4 p-4 bg-surface rounded-lg border border-gray-100">
                   <div className="text-brand-blue"><Wrench size={32} /></div>
                   <span className="font-semibold text-gray-800">ฟาร์มและการเกษตร</span>
                 </div>
@@ -277,9 +277,9 @@ export default function HomePage() {
           </div>
           </Reveal>
 
-          <Reveal delayMs={120}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="motion-card group relative overflow-hidden rounded-xl bg-blue-900 hover:shadow-2xl">
+            <Reveal delayMs={120}>
+            <div className="motion-card-strong group relative overflow-hidden rounded-xl bg-blue-900 hover:shadow-2xl">
               <div className="relative h-72 w-full">
                 <Image src="/images/project_house.png" alt="Residential Solar" fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover transition-transform duration-700 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
@@ -289,7 +289,9 @@ export default function HomePage() {
                 <p className="text-blue-200 text-sm">ระบบ Hybrid พร้อมแบตเตอรี่สำรองไฟ</p>
               </div>
             </div>
-            <div className="motion-card group relative overflow-hidden rounded-xl bg-blue-900 hover:shadow-2xl">
+            </Reveal>
+            <Reveal delayMs={240}>
+            <div className="motion-card-strong group relative overflow-hidden rounded-xl bg-blue-900 hover:shadow-2xl">
               <div className="relative h-72 w-full">
                 <Image src="/images/hero_solar.png" alt="Industrial Solar" fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover transition-transform duration-700 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
@@ -299,8 +301,8 @@ export default function HomePage() {
                 <p className="text-blue-200 text-sm">ระบบ On-grid เพื่อลดค่าไฟในเวลากลางวัน</p>
               </div>
             </div>
+            </Reveal>
           </div>
-          </Reveal>
         </div>
       </section>
 
@@ -316,25 +318,25 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
             <div className="hidden md:block absolute top-1/2 left-[10%] right-[10%] h-0.5 bg-blue-200 -translate-y-1/2 z-0"></div>
 
-            <div className="motion-card relative z-10 flex flex-col items-center text-center rounded-2xl bg-white px-6 py-8 shadow-sm border border-gray-100">
+            <div className="relative z-10 flex flex-col items-center text-center rounded-2xl bg-white px-6 py-8 shadow-sm border border-gray-100">
               <div className="w-16 h-16 rounded-full bg-brand-blue text-white flex items-center justify-center text-2xl font-bold mb-4 shadow-lg ring-4 ring-white">1</div>
               <h3 className="text-lg font-bold text-gray-800 mb-2">สำรวจ & ให้คำปรึกษา</h3>
               <p className="text-gray-600 text-sm">ประเมินพื้นที่และพฤติกรรมการใช้ไฟ</p>
             </div>
 
-            <div className="motion-card relative z-10 flex flex-col items-center text-center rounded-2xl bg-white px-6 py-8 shadow-sm border border-gray-100">
+            <div className="relative z-10 flex flex-col items-center text-center rounded-2xl bg-white px-6 py-8 shadow-sm border border-gray-100">
               <div className="w-16 h-16 rounded-full bg-brand-blue text-white flex items-center justify-center text-2xl font-bold mb-4 shadow-lg ring-4 ring-white">2</div>
               <h3 className="text-lg font-bold text-gray-800 mb-2">ออกแบบระบบ</h3>
               <p className="text-gray-600 text-sm">จัดทำแบบวิศวกรรมและเลือกอุปกรณ์ที่เหมาะสม</p>
             </div>
 
-            <div className="motion-card relative z-10 flex flex-col items-center text-center rounded-2xl bg-white px-6 py-8 shadow-sm border border-gray-100">
+            <div className="relative z-10 flex flex-col items-center text-center rounded-2xl bg-white px-6 py-8 shadow-sm border border-gray-100">
               <div className="w-16 h-16 rounded-full bg-brand-blue text-white flex items-center justify-center text-2xl font-bold mb-4 shadow-lg ring-4 ring-white">3</div>
               <h3 className="text-lg font-bold text-gray-800 mb-2">ติดตั้ง & ทดสอบ</h3>
               <p className="text-gray-600 text-sm">ดำเนินการติดตั้งตามมาตรฐานและทดสอบระบบ</p>
             </div>
 
-            <div className="motion-card relative z-10 flex flex-col items-center text-center rounded-2xl bg-white px-6 py-8 shadow-sm border border-gray-100">
+            <div className="relative z-10 flex flex-col items-center text-center rounded-2xl bg-white px-6 py-8 shadow-sm border border-gray-100">
               <div className="w-16 h-16 rounded-full bg-brand-red text-white flex items-center justify-center text-2xl font-bold mb-4 shadow-lg ring-4 ring-white">4</div>
               <h3 className="text-lg font-bold text-gray-800 mb-2">ส่งมอบ & ดูแล</h3>
               <p className="text-gray-600 text-sm">ส่งมอบงาน สอนการใช้งาน และบริการหลังการขาย</p>

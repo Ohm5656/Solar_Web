@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
+import RouteScrollTop from "@/components/RouteScrollTop";
 
 const sarabun = Sarabun({
   variable: "--font-th",
@@ -27,8 +28,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="th" className={`${sarabun.variable} ${inter.variable}`}>
+    <html lang="th" data-scroll-behavior="smooth" className={`${sarabun.variable} ${inter.variable}`}>
       <body className="antialiased min-h-screen flex flex-col font-sans">
+        <RouteScrollTop />
         <Navbar />
         <main className="flex-grow">
           {children}

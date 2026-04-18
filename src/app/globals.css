@@ -31,11 +31,11 @@ html {
 
 .reveal-enter {
   opacity: 0;
-  transform: translate3d(0, 52px, 0) scale(0.975);
+  transform: translate3d(0, 34px, 0) scale(0.985);
   will-change: transform, opacity;
   transition:
-    opacity 950ms cubic-bezier(0.22, 1, 0.36, 1),
-    transform 950ms cubic-bezier(0.22, 1, 0.36, 1);
+    opacity 760ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 760ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .reveal-enter[data-variant="fade"] {
@@ -43,11 +43,11 @@ html {
 }
 
 .reveal-enter[data-variant="left"] {
-  transform: translate3d(-56px, 0, 0) scale(0.98);
+  transform: translate3d(-40px, 0, 0) scale(0.985);
 }
 
 .reveal-enter[data-variant="right"] {
-  transform: translate3d(56px, 0, 0) scale(0.98);
+  transform: translate3d(40px, 0, 0) scale(0.985);
 }
 
 .reveal-enter.is-visible {
@@ -64,5 +64,17 @@ html {
 }
 
 .motion-card:hover {
+  transform: translate3d(0, -4px, 0);
+}
+
+.motion-card-strong {
+  transition:
+    transform 360ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 360ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 360ms ease;
+  transform: translate3d(0, 0, 0);
+}
+
+.motion-card-strong:hover {
   transform: translate3d(0, -8px, 0);
 }
