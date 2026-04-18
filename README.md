@@ -1,36 +1,100 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Web Solar
+
+A marketing website for a solar energy and electrical engineering business, built with Next.js App Router, React, TypeScript, and Tailwind CSS v4.
+
+The project is structured as a reusable company profile site for a solar installation business, with sections for services, projects, company information, and contact details.
+
+## Tech Stack
+
+- Next.js 16.2.4
+- React 19
+- TypeScript 5
+- Tailwind CSS 4
+- Lucide React icons
+
+## Fonts
+
+The site uses:
+
+- `Sarabun` as the primary font for Thai content
+- `Inter` for English text and selected brand-related labels
+- System font fallbacks: `-apple-system`, `BlinkMacSystemFont`, `"Segoe UI"`, `sans-serif`
+
+Font setup lives in `src/app/layout.tsx` and `src/app/globals.css`.
+
+## Main Routes
+
+- `/` - homepage / landing page
+- `/about` - company background and certifications
+- `/services` - service overview
+- `/projects` - project showcase
+- `/contact` - contact information and inquiry form
+
+## Project Structure
+
+```text
+src/
+  app/
+    about/
+    contact/
+    projects/
+    services/
+    globals.css
+    layout.tsx
+    page.tsx
+  components/
+    FloatingContact.tsx
+    Footer.tsx
+    Navbar.tsx
+
+public/
+  images/
+    hero_solar.png
+    project_house.png
+    service_battery.png
+```
 
 ## Getting Started
 
-First, run the development server:
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000` in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Available Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `npm run dev` - start the development server
+- `npm run build` - create a production build
+- `npm run start` - run the production build locally
+- `npm run lint` - run ESLint
 
-## Learn More
+## Customization Notes
 
-To learn more about Next.js, take a look at the following resources:
+This project is currently set up as a reusable template for a solar business website. Before deploying for a real client, you will likely want to update:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- company name and brand text
+- contact details
+- address, phone, email, and social links
+- service descriptions
+- project showcase content
+- metadata in `src/app/layout.tsx`
+- image assets inside `public/images`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deployment
 
-## Deploy on Vercel
+Build the project with:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm run build
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Then deploy it to your preferred hosting platform, such as Vercel.
