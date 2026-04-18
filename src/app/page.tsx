@@ -24,9 +24,11 @@ export default function HomePage() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-              โซล่าเซลล์และแบตเตอรี่ลิเธียม <br />
-              <span className="text-blue-300">เพื่อพลังงานที่คุ้มค่าและมั่นคง</span>
+              <span className="md:whitespace-nowrap">โซล่าเซลล์และแบตเตอรี่ลิเธียม</span>
+              <br className="hidden md:block" />
+              <span className="text-blue-300 md:whitespace-nowrap">เพื่อพลังงานที่คุ้มค่าและมั่นคง</span>
             </h1>
+
             <p className="text-lg md:text-xl text-blue-100 mb-10 max-w-2xl leading-relaxed">
               ให้บริการออกแบบ ติดตั้ง และให้คำปรึกษาระบบโซล่าเซลล์ ระบบแบตเตอรี่สำรองไฟ (ESS)
               สำหรับบ้านพักอาศัยและโรงงานอุตสาหกรรม โดยทีมวิศวกรผู้เชี่ยวชาญ
@@ -169,7 +171,7 @@ export default function HomePage() {
             </div>
 
             <div>
-              <h2 className="text-3xl font-bold text-brand-blue mb-8">ทำไมต้องเลือก VoltTech</h2>
+              <h2 className="text-3xl font-bold text-brand-blue mb-8">ทำไมต้องเลือก <span className="font-en" lang="en">VoltTech</span></h2>
               <div className="space-y-6">
                 <div className="flex gap-4">
                   <div className="w-12 h-12 bg-blue-50 text-brand-blue rounded-full flex items-center justify-center shrink-0">
@@ -194,7 +196,7 @@ export default function HomePage() {
                     <span className="font-bold text-xl">3</span>
                   </div>
                   <div>
-                    <h4 className="text-lg font-bold text-gray-800 mb-1">ดูแลครบวงจร (Turnkey)</h4>
+                    <h4 className="text-lg font-bold text-gray-800 mb-1">ดูแลครบวงจร (<span className="font-en" lang="en">Turnkey</span>)</h4>
                     <p className="text-gray-600">ตั้งแต่สำรวจ ขออนุญาตการไฟฟ้า ติดตั้ง และดูแลหลังการขาย</p>
                   </div>
                 </div>
@@ -212,19 +214,19 @@ export default function HomePage() {
 
           <div className="flex flex-wrap justify-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
             <div className="flex items-center justify-center w-32 h-16">
-              <span className="text-2xl font-black tracking-tighter text-gray-800">COMPANY A</span>
+              <span className="font-en text-2xl font-black tracking-tighter text-gray-800" lang="en">COMPANY A</span>
             </div>
             <div className="flex items-center justify-center w-32 h-16">
-              <span className="text-2xl font-bold italic text-gray-800">Brand B</span>
+              <span className="font-en text-2xl font-bold italic text-gray-800" lang="en">Brand B</span>
             </div>
             <div className="flex items-center justify-center w-32 h-16">
-              <span className="text-2xl font-serif text-gray-800">GLOBAL INC.</span>
+              <span className="font-en text-2xl font-serif text-gray-800" lang="en">GLOBAL INC.</span>
             </div>
             <div className="flex items-center justify-center w-32 h-16">
-              <span className="text-2xl font-black text-gray-800">TECH<span className="text-brand-blue">CORP</span></span>
+              <span className="font-en text-2xl font-black text-gray-800" lang="en">TECH<span className="text-brand-blue">CORP</span></span>
             </div>
             <div className="flex items-center justify-center w-32 h-16">
-              <span className="text-2xl font-medium tracking-widest text-gray-800">INDUSTRY</span>
+              <span className="font-en text-2xl font-medium tracking-widest text-gray-800" lang="en">INDUSTRY</span>
             </div>
           </div>
         </div>

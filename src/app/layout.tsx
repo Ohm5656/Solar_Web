@@ -1,14 +1,19 @@
 import type { Metadata } from "next";
-import { Prompt } from "next/font/google";
+import { Inter, Sarabun } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
 
-const prompt = Prompt({
-  variable: "--font-prompt",
+const sarabun = Sarabun({
+  variable: "--font-th",
   subsets: ["thai", "latin"],
   weight: ["300", "400", "500", "600", "700"],
+});
+
+const inter = Inter({
+  variable: "--font-en",
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
@@ -22,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="th" className={`${prompt.variable}`}>
+    <html lang="th" className={`${sarabun.variable} ${inter.variable}`}>
       <body className="antialiased min-h-screen flex flex-col font-sans">
         <Navbar />
         <main className="flex-grow">

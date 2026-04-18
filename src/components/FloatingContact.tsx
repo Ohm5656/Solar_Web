@@ -21,7 +21,7 @@ export default function FloatingContact() {
           className="w-12 h-12 bg-[#00B900] rounded-full flex items-center justify-center text-white shadow-lg hover:bg-[#009900] hover:scale-110 transition-all flex-shrink-0"
           title="ติดต่อผ่าน LINE"
         >
-          <span className="font-bold text-xs">LINE</span>
+          <span className="font-en font-bold text-xs" lang="en">LINE</span>
         </a>
         <a 
           href="https://facebook.com" 

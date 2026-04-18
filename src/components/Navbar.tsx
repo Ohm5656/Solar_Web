@@ -24,7 +24,7 @@ export default function Navbar() {
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center gap-2">
-              <div className="w-12 h-12 bg-brand-blue rounded-full flex items-center justify-center text-white font-bold text-xl">
+              <div className="font-en w-12 h-12 bg-brand-blue rounded-full flex items-center justify-center text-white font-bold text-xl">
                 DM
               </div>
               <span className="font-bold text-brand-blue text-xl hidden sm:block">
